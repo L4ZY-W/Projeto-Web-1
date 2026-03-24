@@ -1,0 +1,730 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;}
+
+h1{
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div,h2,h3,h4{
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+
+header{
+    display: flex;
+    margin-top: -10px;  
+    background-color: rgb(53, 88, 114);
+    -webkit-user-select: none;
+    user-select: none;
+    max-height: 120px;
+    align-items: center;
+    gap: 10%;
+    grid-area: header;   
+}
+.logo{
+    width: 120px; 
+    margin-left: 50px;
+    margin-top: -5px;
+}
+.title{
+    text-align: center;
+    font-size: 30pt;
+    width: fit-content;
+}
+
+.title a,h1{
+    color:rgba(247, 248, 240, 0.562);
+    text-decoration: none;
+}
+
+.shortcuts{
+    
+    justify-content: right;   
+}
+
+.shortcuts a{
+    color: white;
+    text-decoration: none;
+}
+
+#acessibilidade{
+    display: grid;
+    gap: 5px;
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 96%;
+    z-index: 9999;
+     
+}
+
+#acessibilidade button{
+    border-radius: 6px;
+    background-color: rgb(247, 248, 240,);
+    cursor: pointer;
+}
+
+#acessibilidade button:hover{
+    scale: 1.4;
+}
+
+body{
+    background-color: rgb(122, 170, 206);
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    
+    margin-top: 50px;
+    margin-bottom: -10%;
+    grid-area: footer;
+}
+
+.quem-somos{
+    align-items: center;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 50px;
+}
+
+.quem-somos div{
+    max-width: 600px;
+    white-space: pre-wrap;
+    font-size: 20pt;
+
+}
+
+
+
+#foto1{
+    width: 600px;
+    border-radius: 12px;
+
+}
+
+.galeria{
+    
+    background-color:  rgba(247, 248, 240, 0.562);
+    gap: 10px;
+    height: fit-content ;
+    width: 80vw;
+    margin-top: 50px;
+    margin-left: 50%;
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    transform: translate( -50%);
+    border-radius: 12px;
+    
+
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.galeria img:hover{
+    scale: 1.4;
+}
+
+.galeria h2 {
+    margin-bottom: 5px;
+}
+
+.galeria p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.veja-mais{
+    background-color: none;
+    background: none;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    border: 10px;
+    border-style: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 90%;
+}
+.veja-mais:hover{
+    scale: 1.2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+    gap: 15px;
+  
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.img-grande {
+    grid-row: span 2;
+}
+
+.img-destaque {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.pacotes {
+    background: #3f5f73;
+    padding: 60px 20px;
+    margin-top: 50px;
+   
+}
+
+.pacotes a{
+    text-decoration: none;
+    color: white;
+}
+
+#pacotes{
+    margin-left: 5%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.pacotes .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #f5f3ee;
+    padding: 15px;
+    border-radius: 12px;
+    height: 250px;
+}
+
+.card:hover{
+    scale: 1.2;
+}
+
+.card p{
+    height: fit-content;
+    width: fit-content;
+}
+
+.testimonials{
+    height: 130px;
+}
+
+.container2 {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.depoimento{
+    flex: 0 0 auto;
+    background: #f5f3ee;
+    padding: 15px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.depoimento h3{
+    text-align: center;
+}
+
+
+.carrossel{
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+    scroll-behavior: smooth;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carrossel:hover{
+  animation-play-state: paused;
+}
+
+
+button{
+    width: 30px;
+}
+
+.footer {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  max-width: 300px;
+}
+
+.footer-left h2 {
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  color: #555;
+  font-size: 14px;
+}
+
+.socials a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column h4 {
+  margin-bottom: 10px;
+}
+
+.column a {
+  text-decoration: none;
+  color: #555;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.column a:hover {
+  color: #000;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;}
+
+header{
+    display: flex;
+    margin-top: -10px;  
+    background-color: rgb(53, 88, 114);
+    -webkit-user-select: none;
+    user-select: none;
+    max-height: 120px;
+    align-items: center;
+    gap: 10%;
+    grid-area: header;   
+}
+.logo{
+    width: 120px; 
+    margin-left: 50px;
+    margin-top: -5px;
+}
+.title{
+    text-align: center;
+    font-size: 30pt;
+    width: fit-content;
+}
+
+.title a,h1{
+    color:rgba(247, 248, 240, 0.562);
+    text-decoration: none;
+}
+
+.shortcuts{
+    
+    justify-content: right;   
+}
+
+.shortcuts a{
+    color: white;
+    text-decoration: none;
+}
+
+#acessibilidade{
+    display: grid;
+    gap: 5px;
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 96%;
+    z-index: 9999;   
+}
+
+#acessibilidade button{
+    border-radius: 6px;
+    background-color: rgb(247, 248, 240,);
+}
+
+body{
+    background-color: rgb(122, 170, 206);
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    
+    margin-top: 50px;
+    margin-bottom: -10%;
+    grid-area: footer;
+}
+
+.quem-somos{
+    align-items: center;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 50px;
+}
+
+.quem-somos div{
+    text-align: justify;
+    max-width: 600px;
+    white-space: pre-wrap;
+
+}
+
+
+
+#foto1{
+    width: 600px;
+    border-radius: 12px;
+
+}
+
+.galeria{
+    
+    background-color:  rgba(247, 248, 240, 0.562);
+    gap: 10px;
+    height: fit-content ;
+    width: 80vw;
+    margin-top: 50px;
+    margin-left: 50%;
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    transform: translate( -50%);
+    border-radius: 12px;
+    
+
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.galeria img:hover{
+    scale: 1.4;
+}
+
+.galeria h2 {
+    margin-bottom: 5px;
+}
+
+.galeria p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+    gap: 15px;
+  
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.img-grande {
+    grid-row: span 2;
+}
+
+.img-destaque {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.pacotes {
+    background: #3f5f73;
+    padding: 60px 20px;
+    margin-top: 50px;
+   
+}
+
+#pacotes{
+    margin-left: 5%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.pacotes .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #f5f3ee;
+    padding: 15px;
+    border-radius: 12px;
+    height: 250px;
+}
+
+.card:hover{
+    scale: 1.2;
+}
+
+.card button {
+    margin-top: 100px;    
+    border: none;
+    background: none;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.testimonials{
+    height: 130px;
+}
+
+.container2 {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.depoimento{
+    flex: 0 0 auto;
+    background: #f5f3ee;
+    padding: 15px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.depoimento h3{
+    text-align: center;
+}
+
+
+.carrossel{
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+    scroll-behavior: smooth;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carrossel:hover{
+  animation-play-state: paused;
+}
+
+
+button{
+    width: 30px;
+}
+
+.footer {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  max-width: 300px;
+}
+
+.footer-left h2 {
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  color: #555;
+  font-size: 14px;
+}
+
+.socials a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column h4 {
+  margin-bottom: 10px;
+}
+
+.column a {
+  text-decoration: none;
+  color: #555;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.column a:hover {
+  color: #000;
+}
+
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    header{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+
+    body{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #foto1{
+        max-width: 50%;
+    }
+
+    .title{
+        font-size: 22pt;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+}
